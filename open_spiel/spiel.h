@@ -530,7 +530,7 @@ class State {
   // A string representation for the history. There should be a one to one
   // mapping between histories (i.e. sequences of actions for all players,
   // including chance) and the `State` objects.
-  std::string HistoryString() const { return absl::StrJoin(History(), ", "); }
+  virtual std::string HistoryString() const { return absl::StrJoin(History(), ", "); }
 
   // Return how many moves have been done so far in the game.
   // When players make simultaneous moves, this counts only as a single move.

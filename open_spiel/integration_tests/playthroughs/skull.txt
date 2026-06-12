@@ -1,0 +1,1064 @@
+game: skull
+
+GameType.chance_mode = ChanceMode.EXPLICIT_STOCHASTIC
+GameType.dynamics = Dynamics.SEQUENTIAL
+GameType.information = Information.IMPERFECT_INFORMATION
+GameType.long_name = "Skull"
+GameType.max_num_players = 6
+GameType.min_num_players = 3
+GameType.parameter_specification = ["handsize", "players", "winsneeded"]
+GameType.provides_information_state_string = False
+GameType.provides_information_state_tensor = False
+GameType.provides_observation_string = True
+GameType.provides_observation_tensor = True
+GameType.provides_factored_observation_string = False
+GameType.reward_model = RewardModel.TERMINAL
+GameType.short_name = "skull"
+GameType.utility = Utility.ZERO_SUM
+
+NumDistinctActions() = 29
+PolicyTensorShape() = [29]
+MaxChanceOutcomes() = 2
+GetParameters() = {handsize=4,players=4,winsneeded=2}
+NumPlayers() = 4
+MinUtility() = -2.0
+MaxUtility() = 6.0
+UtilitySum() = 0.0
+ObservationTensorShape() = [69]
+ObservationTensorLayout() = TensorLayout.CHW
+ObservationTensorSize() = 69
+MaxGameLength() = 983
+ToString() = "skull()"
+
+# State 0
+# SkullState{phase=Placement move=0 cur=0 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = []
+HistoryString() = "[]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["0: Place Rose", "0: Place Skull"]
+
+# Apply action "0: Place Skull"
+action: 1
+
+# State 1
+# SkullState{phase=Placement move=1 cur=1 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1]
+HistoryString() = "[s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["1: Place Rose", "1: Place Skull"]
+
+# Apply action "1: Place Skull"
+action: 1
+
+# State 2
+# SkullState{phase=Placement move=2 cur=2 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1]
+HistoryString() = "[s,s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["2: Place Rose", "2: Place Skull"]
+
+# Apply action "2: Place Skull"
+action: 1
+
+# State 3
+# SkullState{phase=Placement move=3 cur=3 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1]
+HistoryString() = "[s,s,s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["3: Place Rose", "3: Place Skull"]
+
+# Apply action "3: Place Skull"
+action: 1
+
+# State 4
+# SkullState{phase=Placement move=4 cur=0 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1]
+HistoryString() = "[s,s,s,s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [3, 4, 5, 6]
+StringLegalActions() = ["0: Bid 1", "0: Bid 2", "0: Bid 3", "0: Bid 4"]
+
+# Apply action "0: Bid 4"
+action: 6
+
+# State 5
+# SkullState{phase=Bidding move=5 cur=1 challenger=0 bid=4 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6]
+HistoryString() = "[s,s,s,s,b4]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [2]
+StringLegalActions() = ["1: Pass"]
+
+# Apply action "1: Pass"
+action: 2
+
+# State 6
+# SkullState{phase=Bidding move=6 cur=2 challenger=0 bid=4 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2]
+HistoryString() = "[s,s,s,s,b4,p]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Phase: Bidding | Bid: 4 | Current Player: 2 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Bidding | Bid: 4 | Current Player: 2 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Bidding | Bid: 4 | Current Player: 2 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Bidding | Bid: 4 | Current Player: 2 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◯◯◉◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◯◯◉◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◯◯◉◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◯◯◉◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [2]
+StringLegalActions() = ["2: Pass"]
+
+# Apply action "2: Pass"
+action: 2
+
+# State 7
+# SkullState{phase=Bidding move=7 cur=3 challenger=0 bid=4 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2]
+HistoryString() = "[s,s,s,s,b4,p,p]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Phase: Bidding | Bid: 4 | Current Player: 3 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Bidding | Bid: 4 | Current Player: 3 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Bidding | Bid: 4 | Current Player: 3 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Bidding | Bid: 4 | Current Player: 3 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◯◯◯◯◉◉◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◯◯◯◯◉◉◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◯◯◯◯◉◉◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◯◯◯◯◉◉◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [2]
+StringLegalActions() = ["3: Pass"]
+
+# Apply action "3: Pass"
+action: 2
+
+# State 8
+# SkullState{phase=Flipping move=8 cur=0 challenger=0 bid=4 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=1 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2]
+HistoryString() = "[s,s,s,s,b4,p,p,p]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Phase: Flipping | Bid: 4 | Current Player: 0 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(1) = "Phase: Flipping | Bid: 4 | Current Player: 0 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(2) = "Phase: Flipping | Bid: 4 | Current Player: 0 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(3) = "Phase: Flipping | Bid: 4 | Current Player: 0 | Challenger: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 4\n P1: 0 wins | Passed: Y | Cards: 4\n P2: 0 wins | Passed: Y | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◯◯◉◉◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◯◯◉◉◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(2): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◯◯◉◉◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◯◯◉◉◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [19]
+StringLegalActions() = ["0: Flip player 0"]
+
+# Apply action "0: Flip player 0"
+action: 19
+
+# State 9
+# Apply action "0: Discard Skull"
+action: 24
+
+# State 10
+# Apply action "0: Place Rose"
+action: 0
+
+# State 11
+# SkullState{phase=Placement move=11 cur=1 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["1: Place Rose", "1: Place Skull"]
+
+# Apply action "1: Place Skull"
+action: 1
+
+# State 12
+# SkullState{phase=Placement move=12 cur=2 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["2: Place Rose", "2: Place Skull"]
+
+# Apply action "2: Place Skull"
+action: 1
+
+# State 13
+# SkullState{phase=Placement move=13 cur=3 challenger=-3 bid=0 first=0 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 4\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◯◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0, 1]
+StringLegalActions() = ["3: Place Rose", "3: Place Skull"]
+
+# Apply action "3: Place Skull"
+action: 1
+
+# State 14
+# Apply action "0: Bid 3"
+action: 5
+
+# State 15
+# Apply action "1: Bid 4"
+action: 6
+
+# State 16
+# Apply action "2: Pass"
+action: 2
+
+# State 17
+# Apply action "3: Pass"
+action: 2
+
+# State 18
+# Apply action "0: Pass"
+action: 2
+
+# State 19
+# Apply action "1: Flip player 1"
+action: 20
+
+# State 20
+# Apply action "1: Discard Skull"
+action: 24
+
+# State 21
+# Apply action "1: Place Rose"
+action: 0
+
+# State 22
+# Apply action "2: Place Rose"
+action: 0
+
+# State 23
+# Apply action "3: Place Skull"
+action: 1
+
+# State 24
+# Apply action "0: Place Rose"
+action: 0
+
+# State 25
+# Apply action "1: Bid 3"
+action: 5
+
+# State 26
+# Apply action "2: Bid 4"
+action: 6
+
+# State 27
+# Apply action "3: Pass"
+action: 2
+
+# State 28
+# Apply action "0: Pass"
+action: 2
+
+# State 29
+# Apply action "1: Pass"
+action: 2
+
+# State 30
+# Apply action "2: Flip player 2"
+action: 21
+
+# State 31
+# Apply action "2: Flip player 0"
+action: 19
+
+# State 32
+# Apply action "2: Flip player 3"
+action: 22
+
+# State 33
+# SkullState{phase=CardLoss move=33 cur=chance challenger=2 bid=4 first=1 last_flipped=3 flipped=3 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=1 score=0 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=1 active=T
+#   P2: hand=[R,R,R,S] stack=[R] revealed=1 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=1 score=0 passed=1 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3]"
+IsChanceNode() = True
+IsSimultaneousNode() = False
+CurrentPlayer() = -1
+ObservationString(0) = "Phase: CardLoss | Bid: 4 | Current Player: -1 | Challenger: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: Y | Cards: 3\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(1) = "Phase: CardLoss | Bid: 4 | Current Player: -1 | Challenger: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(2) = "Phase: CardLoss | Bid: 4 | Current Player: -1 | Challenger: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: Y | Cards: 3\n P2: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )\n P3: 0 wins | Passed: Y | Cards: 4"
+ObservationString(3) = "Phase: CardLoss | Bid: 4 | Current Player: -1 | Challenger: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: Y | Cards: 3\n P2: 0 wins | Passed: N | Cards: 4\n P3: 0 wins | Passed: Y | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◯◯◉◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◉◯◉◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◯◯◉◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◉◯◉◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◯◯◉◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◉◯◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◯◯◉◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◉◉◯◉◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ChanceOutcomes() = [(0,0.75), (1,0.25)]
+LegalActions() = [0, 1]
+StringLegalActions() = ["-1: Place Rose", "-1: Place Skull"]
+
+# Apply action "-1: Place Skull"
+action: 1
+
+# State 34
+# Apply action "2: Place Rose"
+action: 0
+
+# State 35
+# Apply action "3: Place Skull"
+action: 1
+
+# State 36
+# Apply action "0: Place Rose"
+action: 0
+
+# State 37
+# Apply action "1: Place Rose"
+action: 0
+
+# State 38
+# SkullState{phase=Placement move=38 cur=2 challenger=-3 bid=0 first=2 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [3, 4, 5, 6]
+StringLegalActions() = ["2: Bid 1", "2: Bid 2", "2: Bid 3", "2: Bid 4"]
+
+# Apply action "2: Bid 1"
+action: 3
+
+# State 39
+# Apply action "3: Bid 4"
+action: 6
+
+# State 40
+# SkullState{phase=Bidding move=40 cur=0 challenger=3 bid=4 first=2 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Phase: Bidding | Bid: 4 | Current Player: 0 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Bidding | Bid: 4 | Current Player: 0 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Bidding | Bid: 4 | Current Player: 0 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Bidding | Bid: 4 | Current Player: 0 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [2]
+StringLegalActions() = ["0: Pass"]
+
+# Apply action "0: Pass"
+action: 2
+
+# State 41
+# SkullState{phase=Bidding move=41 cur=1 challenger=3 bid=4 first=2 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R,S] stack=[S] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(1) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(2) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 4"
+ObservationString(3) = "Phase: Bidding | Bid: 4 | Current Player: 1 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 4 (Your Hand: R R R S )"
+ObservationTensor(0): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◉◉◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯
+ObservationTensor(1): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◉◉◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◉◉◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◉◯◯◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◉◉◯◯◯◯◯◯◯◉◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [2]
+StringLegalActions() = ["1: Pass"]
+
+# Apply action "1: Pass"
+action: 2
+
+# State 42
+# Apply action "2: Pass"
+action: 2
+
+# State 43
+# Apply action "3: Flip player 3"
+action: 22
+
+# State 44
+# Apply action "3: Discard Skull"
+action: 24
+
+# State 45
+# SkullState{phase=Placement move=45 cur=3 challenger=-3 bid=0 first=3 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+#   P1: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+#   P3: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 0 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 0 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0]
+StringLegalActions() = ["3: Place Rose"]
+
+# Apply action "3: Place Rose"
+action: 0
+
+# State 46
+# Apply action "0: Place Rose"
+action: 0
+
+# State 47
+# Apply action "1: Place Rose"
+action: 0
+
+# State 48
+# Apply action "2: Place Rose"
+action: 0
+
+# State 49
+# Apply action "3: Bid 3"
+action: 5
+
+# State 50
+# Apply action "0: Bid 4"
+action: 6
+
+# State 51
+# Apply action "1: Pass"
+action: 2
+
+# State 52
+# Apply action "2: Pass"
+action: 2
+
+# State 53
+# Apply action "3: Pass"
+action: 2
+
+# State 54
+# Apply action "0: Flip player 0"
+action: 19
+
+# State 55
+# Apply action "0: Flip player 2"
+action: 21
+
+# State 56
+# Apply action "0: Flip player 3"
+action: 22
+
+# State 57
+# Apply action "0: Flip player 1"
+action: 20
+
+# State 58
+# Apply action "0: Place Rose"
+action: 0
+
+# State 59
+# Apply action "1: Place Rose"
+action: 0
+
+# State 60
+# Apply action "2: Place Rose"
+action: 0
+
+# State 61
+# Apply action "3: Place Rose"
+action: 0
+
+# State 62
+# Apply action "0: Bid 2"
+action: 4
+
+# State 63
+# Apply action "1: Bid 3"
+action: 5
+
+# State 64
+# Apply action "2: Bid 4"
+action: 6
+
+# State 65
+# Apply action "3: Pass"
+action: 2
+
+# State 66
+# Apply action "0: Pass"
+action: 2
+
+# State 67
+# Apply action "1: Pass"
+action: 2
+
+# State 68
+# Apply action "2: Flip player 2"
+action: 21
+
+# State 69
+# Apply action "2: Flip player 1"
+action: 20
+
+# State 70
+# Apply action "2: Flip player 0"
+action: 19
+
+# State 71
+# Apply action "2: Flip player 3"
+action: 22
+
+# State 72
+# SkullState{phase=Placement move=72 cur=2 challenger=-3 bid=0 first=2 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[] revealed=0 score=1 passed=0 active=T
+#   P1: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[] revealed=0 score=1 passed=0 active=T
+#   P3: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 2\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0]
+StringLegalActions() = ["2: Place Rose"]
+
+# Apply action "2: Place Rose"
+action: 0
+
+# State 73
+# Apply action "3: Place Rose"
+action: 0
+
+# State 74
+# SkullState{phase=Placement move=74 cur=0 challenger=-3 bid=0 first=2 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[] revealed=0 score=1 passed=0 active=T
+#   P1: hand=[R,R,R] stack=[] revealed=0 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=0 active=T
+#   P3: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22, 0, 0]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3,r,r]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(1) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(2) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(3) = "Phase: Placement | Bid: 0 | Current Player: 0\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: N | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: N | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(1): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(2): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯
+ObservationTensor(3): ◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◉◯◉◯◯◉◉◉◯◯◯◯◯◯◉◯◯◯◯◯◯◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [0]
+StringLegalActions() = ["0: Place Rose"]
+
+# Apply action "0: Place Rose"
+action: 0
+
+# State 75
+# Apply action "1: Place Rose"
+action: 0
+
+# State 76
+# Apply action "2: Bid 2"
+action: 4
+
+# State 77
+# Apply action "3: Pass"
+action: 2
+
+# State 78
+# Apply action "0: Bid 3"
+action: 5
+
+# State 79
+# Apply action "1: Bid 4"
+action: 6
+
+# State 80
+# Apply action "2: Pass"
+action: 2
+
+# State 81
+# Apply action "3: Pass"
+action: 2
+
+# State 82
+# Apply action "0: Pass"
+action: 2
+
+# State 83
+# Apply action "1: Flip player 1"
+action: 20
+
+# State 84
+# Apply action "1: Flip player 3"
+action: 22
+
+# State 85
+# SkullState{phase=Flipping move=85 cur=1 challenger=1 bid=4 first=2 last_flipped=3 flipped=2 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=1 score=0 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P3: hand=[R,R,R] stack=[R] revealed=1 score=0 passed=1 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22, 0, 0, 0, 0, 4, 2, 5, 6, 2, 2, 2, 20, 22]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3,r,r,r,r,b2,p,b3,b4,p,p,p,f1,f3]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: Y | Cards: 3"
+ObservationString(1) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: Y | Cards: 3"
+ObservationString(2) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: Y | Cards: 3"
+ObservationString(3) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 0 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: Y | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(1): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◯◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [19, 21]
+StringLegalActions() = ["1: Flip player 0", "1: Flip player 2"]
+
+# Apply action "1: Flip player 2"
+action: 21
+
+# State 86
+# Apply action "1: Flip player 0"
+action: 19
+
+# State 87
+# Apply action "1: Place Rose"
+action: 0
+
+# State 88
+# Apply action "2: Place Rose"
+action: 0
+
+# State 89
+# Apply action "3: Place Rose"
+action: 0
+
+# State 90
+# Apply action "0: Place Rose"
+action: 0
+
+# State 91
+# Apply action "1: Bid 2"
+action: 4
+
+# State 92
+# Apply action "2: Bid 3"
+action: 5
+
+# State 93
+# Apply action "3: Bid 4"
+action: 6
+
+# State 94
+# Apply action "0: Pass"
+action: 2
+
+# State 95
+# Apply action "1: Pass"
+action: 2
+
+# State 96
+# Apply action "2: Pass"
+action: 2
+
+# State 97
+# SkullState{phase=Flipping move=97 cur=3 challenger=3 bid=4 first=1 last_flipped=-3 flipped=0 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P3: hand=[R,R,R] stack=[R] revealed=0 score=0 passed=0 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22, 0, 0, 0, 0, 4, 2, 5, 6, 2, 2, 2, 20, 22, 21, 19, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3,r,r,r,r,b2,p,b3,b4,p,p,p,f1,f3,f2,f0,r,r,r,r,b2,b3,b4,p,p,p]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Phase: Flipping | Bid: 4 | Current Player: 3 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 1 wins | Passed: Y | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(1) = "Phase: Flipping | Bid: 4 | Current Player: 3 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(2) = "Phase: Flipping | Bid: 4 | Current Player: 3 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: Y | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P3: 0 wins | Passed: N | Cards: 3"
+ObservationString(3) = "Phase: Flipping | Bid: 4 | Current Player: 3 | Challenger: 3\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: Y | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 0 wins | Passed: N | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◉◉◉◯◉◉◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(1): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◉◉◉◯◉◉◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◉◉◉◯◉◉◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◉◉◉◯◉◉◉◯◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [22]
+StringLegalActions() = ["3: Flip player 3"]
+
+# Apply action "3: Flip player 3"
+action: 22
+
+# State 98
+# Apply action "3: Flip player 1"
+action: 20
+
+# State 99
+# Apply action "3: Flip player 0"
+action: 19
+
+# State 100
+# Apply action "3: Flip player 2"
+action: 21
+
+# State 101
+# Apply action "3: Place Rose"
+action: 0
+
+# State 102
+# Apply action "0: Place Rose"
+action: 0
+
+# State 103
+# Apply action "1: Place Rose"
+action: 0
+
+# State 104
+# Apply action "2: Place Rose"
+action: 0
+
+# State 105
+# Apply action "3: Bid 3"
+action: 5
+
+# State 106
+# Apply action "0: Pass"
+action: 2
+
+# State 107
+# Apply action "1: Bid 4"
+action: 6
+
+# State 108
+# Apply action "2: Pass"
+action: 2
+
+# State 109
+# Apply action "3: Pass"
+action: 2
+
+# State 110
+# Apply action "0: Pass"
+action: 2
+
+# State 111
+# Apply action "1: Flip player 1"
+action: 20
+
+# State 112
+# Apply action "1: Flip player 0"
+action: 19
+
+# State 113
+# Apply action "1: Flip player 3"
+action: 22
+
+# State 114
+# SkullState{phase=Flipping move=114 cur=1 challenger=1 bid=4 first=3 last_flipped=3 flipped=3 winner=-3
+#   P0: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=0 score=1 passed=1 active=T
+#   P3: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=1 active=T
+# }
+IsTerminal() = False
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22, 0, 0, 0, 0, 4, 2, 5, 6, 2, 2, 2, 20, 22, 21, 19, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 22, 20, 19, 21, 0, 0, 0, 0, 5, 2, 6, 2, 2, 2, 20, 19, 22]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3,r,r,r,r,b2,p,b3,b4,p,p,p,f1,f3,f2,f0,r,r,r,r,b2,b3,b4,p,p,p,f3,f1,f0,f2,r,r,r,r,b3,p,b4,p,p,p,f1,f0,f3]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 1 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(1) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(2) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(3) = "Phase: Flipping | Bid: 4 | Current Player: 1 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 1 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(1): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [21]
+StringLegalActions() = ["1: Flip player 2"]
+
+# Apply action "1: Flip player 2"
+action: 21
+
+# State 115
+# SkullState{phase=Flipping move=115 cur=-4 challenger=1 bid=4 first=1 last_flipped=2 flipped=4 winner=1
+#   P0: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=1 active=T
+#   P1: hand=[R,R,R] stack=[R] revealed=1 score=2 passed=0 active=T
+#   P2: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=1 active=T
+#   P3: hand=[R,R,R] stack=[R] revealed=1 score=1 passed=1 active=T
+# }
+IsTerminal() = True
+History() = [1, 1, 1, 1, 6, 2, 2, 2, 19, 24, 0, 1, 1, 1, 5, 6, 2, 2, 2, 20, 24, 0, 0, 1, 0, 5, 6, 2, 2, 2, 21, 19, 22, 1, 0, 1, 0, 0, 3, 6, 2, 2, 2, 22, 24, 0, 0, 0, 0, 5, 6, 2, 2, 2, 19, 21, 22, 20, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 21, 20, 19, 22, 0, 0, 0, 0, 4, 2, 5, 6, 2, 2, 2, 20, 22, 21, 19, 0, 0, 0, 0, 4, 5, 6, 2, 2, 2, 22, 20, 19, 21, 0, 0, 0, 0, 5, 2, 6, 2, 2, 2, 20, 19, 22, 21]
+HistoryString() = "[s,s,s,s,b4,p,p,p,f0,ds,r,s,s,s,b3,b4,p,p,p,f1,ds,r,r,s,r,b3,b4,p,p,p,f2,f0,f3,s,r,s,r,r,b1,b4,p,p,p,f3,ds,r,r,r,r,b3,b4,p,p,p,f0,f2,f3,f1,r,r,r,r,b2,b3,b4,p,p,p,f2,f1,f0,f3,r,r,r,r,b2,p,b3,b4,p,p,p,f1,f3,f2,f0,r,r,r,r,b2,b3,b4,p,p,p,f3,f1,f0,f2,r,r,r,r,b3,p,b4,p,p,p,f1,f0,f3,f2]"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = -4
+ObservationString(0) = "Phase: Flipping | Bid: 4 | Current Player: -4 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P1: 2 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(1) = "Phase: Flipping | Bid: 4 | Current Player: -4 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 2 wins | Passed: N | Cards: 3 (Your Hand: R R R )\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(2) = "Phase: Flipping | Bid: 4 | Current Player: -4 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 2 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )\n P3: 1 wins | Passed: Y | Cards: 3"
+ObservationString(3) = "Phase: Flipping | Bid: 4 | Current Player: -4 | Challenger: 1\nPlayer Stats (Wins/Passed/Cards):\n P0: 1 wins | Passed: Y | Cards: 3\n P1: 2 wins | Passed: N | Cards: 3\n P2: 1 wins | Passed: Y | Cards: 3\n P3: 1 wins | Passed: Y | Cards: 3 (Your Hand: R R R )"
+ObservationTensor(0): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(1): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(2): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+ObservationTensor(3): ◯◯◉◯◯◯◯◯◉◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◯◉◯◯◉◯◉◉◉◉◉◉◯◉◉◉◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯◉◯◉◯◯◯◯◯
+Rewards() = [-1, 3, -1, -1]
+Returns() = [-1, 3, -1, -1]

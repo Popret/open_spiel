@@ -26,7 +26,7 @@
 #include "open_spiel/utils/init.h"
 #include "open_spiel/utils/file.h"
 
-ABSL_FLAG(std::string, game, "kuhn_poker(players=3)", "Game to run CFR on.");
+ABSL_FLAG(std::string, game, "skull(players=3)", "Game to run CFR on.");
 ABSL_FLAG(std::string, file_prefix, "/tmp", "Path prefix for file writing.");
 ABSL_FLAG(int, seed, 39827891, "Seed to use for randomization.");
 ABSL_FLAG(int, repeats, 3, "How many iters to run for.");

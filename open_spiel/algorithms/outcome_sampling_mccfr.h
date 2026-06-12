@@ -38,18 +38,18 @@ namespace open_spiel {
 namespace algorithms {
 
 class OutcomeSamplingMCCFRSolver {
- public:
+public:
   static inline constexpr double kInitialTableValues = 0.000001;
   static inline constexpr double kDefaultEpsilon = 0.6;
 
   // Creates a solver with a specific seed, average type and an explicit
   // default uniform policy for states that have not been visited.
-  OutcomeSamplingMCCFRSolver(const Game& game, double epsilon = kDefaultEpsilon,
+  OutcomeSamplingMCCFRSolver(const Game &game, double epsilon = kDefaultEpsilon,
                              int seed = -1);
 
   // Creates a solver with a specific seed and average type, and also allows
   // for a custom default policy for states that have not been visited.
-  OutcomeSamplingMCCFRSolver(const Game& game,
+  OutcomeSamplingMCCFRSolver(const Game &game,
                              std::shared_ptr<Policy> default_policy,
                              double epsilon = kDefaultEpsilon, int seed = -1);
 
@@ -63,9 +63,9 @@ class OutcomeSamplingMCCFRSolver {
   void RunIteration() { RunIteration(&rng_); }
 
   // Same as above, but uses the specified random number generator instead.
-  void RunIteration(std::mt19937* rng);
+  void RunIteration(std::mt19937 *rng);
 
-  CFRInfoStateValuesTable& InfoStateValuesTable() { return info_states_; }
+  CFRInfoStateValuesTable &InfoStateValuesTable() { return info_states_; }
 
   // Computes the average policy, containing the policy for all players.
   // The returned policy instance should only be used during the lifetime of
@@ -78,24 +78,24 @@ class OutcomeSamplingMCCFRSolver {
     CFRAveragePolicy policy(info_states_, nullptr);
     return TabularPolicy(*game_, policy);
   }
-
+  void SetEpsilon(double new_epsilon) { epsilon_ = new_epsilon; }
   // See comments above CFRInfoStateValues::Serialize(double_precision) for
   // notes about the double_precision parameter.
   std::string Serialize(int double_precision = -1,
                         std::string delimiter = "<~>") const;
 
- private:
-  double SampleEpisode(State* state, Player update_player, std::mt19937* rng,
+private:
+  double SampleEpisode(State *state, Player update_player, std::mt19937 *rng,
                        double my_reach, double opp_reach, double sample_reach);
-  std::vector<double> SamplePolicy(const CFRInfoStateValues& info_state) const;
+  std::vector<double> SamplePolicy(const CFRInfoStateValues &info_state) const;
 
   // The b_i function from  Schmid et al. '19.
-  double Baseline(const State& state, const CFRInfoStateValues& info_state,
+  double Baseline(const State &state, const CFRInfoStateValues &info_state,
                   int aidx) const;
 
   // Applies Eq. 9 of Schmid et al. '19
-  double BaselineCorrectedChildValue(const State& state,
-                                     const CFRInfoStateValues& info_state,
+  double BaselineCorrectedChildValue(const State &state,
+                                     const CFRInfoStateValues &info_state,
                                      int sampled_aidx, int aidx,
                                      double child_value,
                                      double sample_prob) const;
@@ -109,10 +109,10 @@ class OutcomeSamplingMCCFRSolver {
 };
 
 std::unique_ptr<OutcomeSamplingMCCFRSolver>
-DeserializeOutcomeSamplingMCCFRSolver(const std::string& serialized,
+DeserializeOutcomeSamplingMCCFRSolver(const std::string &serialized,
                                       std::string delimiter = "<~>");
 
-}  // namespace algorithms
-}  // namespace open_spiel
+} // namespace algorithms
+} // namespace open_spiel
 
-#endif  // OPEN_SPIEL_ALGORITHMS_OUTCOME_SAMPLING_MCCFR_H_
+#endif // OPEN_SPIEL_ALGORITHMS_OUTCOME_SAMPLING_MCCFR_H_

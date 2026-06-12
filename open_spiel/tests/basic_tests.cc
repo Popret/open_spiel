@@ -482,6 +482,7 @@ void RandomSimulation(std::mt19937* rng, const Game& game, bool undo,
         std::cout << "Sum Rewards: " << absl::StrJoin(episode_returns, " ")
                   << std::endl;
       }
+        std::cout << "p: "<< std::endl;
       for (auto p = Player{0}; p < game.NumPlayers(); ++p) {
         SPIEL_CHECK_TRUE(Near(episode_returns[p], returns[p], kRewardEpsilon));
       }
@@ -489,8 +490,10 @@ void RandomSimulation(std::mt19937* rng, const Game& game, bool undo,
       // Decision node.
       Player player = state->CurrentPlayer();
 
+        std::cout << "p: "<< std::endl;
       CheckObservables(game, *state, observation.get());
 
+        std::cout << "p: "<< std::endl;
       // Sample an action uniformly.
       std::vector<Action> actions = state->LegalActions();
       if (mask_test) LegalActionsMaskTest(game, *state, state->CurrentPlayer(),
